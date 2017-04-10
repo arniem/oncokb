@@ -30,9 +30,9 @@ public interface EvidencesApi {
     @ApiResponses(value = {
         @ApiResponse(code = 200, message = "OK", response = Evidence.class),
         @ApiResponse(code = 400, message = "Error, error message will be given.", response = ResponseEntity.class)})
-    @RequestMapping(value = "/evidences",
-        produces = {"application/json"},
-        method = RequestMethod.POST)
+//    @RequestMapping(value = "/evidences",
+//        produces = {"application/json"},
+//        method = RequestMethod.POST)
     ResponseEntity<Set<Evidence>> evidencesUUIDsGet(
         @ApiParam(value = "Universally Unique identifier list.", required = true) @RequestBody(required = true) Set<String> uuids
     );
